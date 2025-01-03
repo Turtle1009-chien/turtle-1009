@@ -1,0 +1,36 @@
+
+body {
+	background-color:#DDDDDD;
+}
+
+.news{
+	background-color:#FFFFFF;
+}
+
+.margin_all_1{
+	margin:50px;
+}
+
+.margin_all_2{
+	margin:10px 50px; /*  順序 上下 左右  */
+}
+
+.margin_left{
+	margin-left:50px;
+}
+
+.margin_right{
+	margin-right:50px;
+}
+
+.margin_top{
+	margin-top:50px;
+}
+
+.margin_bottom{
+	margin-bottom:50px;
+}
+
+span.crimson{
+	color:#DC143C; 
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <style>
+        .text-left {
+            text-align: left;
+        }
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>興趣愛好</title>
+    <link rel="shortcut icon" href="images/原始龜.jpg">
+    <link rel="stylesheet" href="style.css">
+    <div style="text-align: right;"></div>
+
+</head>
+<body>
+    <header>
+        <h1>興趣愛好</h1>
+        <nav id="top">
+            <ul>
+                <li><a href="index.html">主頁</a></li>
+                <li><a href="sketch.html">手繪</a></li>
+                <li><a href="digital.html">電繪</a></li>
+                <li><a href="hobby.html">興趣</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <br>
+        <br>
+        <h2>既然你誠心誠意的發問了，我就大發慈悲的告訴你</h2>
+        <br>
+        <h3>分享下最近的發現🫶</h3>  
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
+            <p style="flex: 1; margin-left: 50px;">
+                <h2>2024
+                    <br>
+                    1102
+                </h2>
+                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;">
+                    SUNO
+                </p>
+                <br>
+                <br>
+                <p class="text-left">
+                    平常都有接觸AI音樂，但印象中都是半AI半人工，又都是輕音樂。
+                    但有次老師推薦SUNO就今去看看，隨便下個指令"單個旋律""躍進"
+                    <br><br>
+                    結果挖塞，變成一首歌。
+                </p>
+            </p>
+            <img  src="images/單個旋律.jpeg" alt="單個旋律" style="width: 300px;">
+            <img  src="images/躍進.jpeg" alt="單個旋律" style="width: 300px;">
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
+            <p style="flex: 1; margin-left: 20px;">
+                <h2>單個旋律
+                </h2>
+                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;">
+                    SUNO
+                </p>
+            <audio id="myAudio" controls>
+                <br>s
+                <source src="images/單個旋律.mp3" type="audio/mpeg">
+                您的瀏覽器不支援音訊元素。
+            </audio>
+            
+            <br>
+            
+            <input type="range" id="seekBar" value="0" min="0" max="100" step="1" style="width: 300px;">
+            
+            <script>
+                const audio = document.getElementById('myAudio');
+                const seekBar = document.getElementById('seekBar');
+            
+                // 當音訊播放進度改變時，更新進度條
+                audio.addEventListener('timeupdate', () => {
+                    const value = (audio.currentTime / audio.duration) * 100;
+                    seekBar.value = value;
+                });
+            
+                // 當用戶拖動進度條時，調整音訊播放位置
+                seekBar.addEventListener('input', () => {
+                    const seekTo = (seekBar.value / 100) * audio.duration;
+                    audio.currentTime = seekTo;
+                });
+            </script>
+            
+            
+
+            <img  src="images/單個旋律.jpeg" alt="單個旋律" style="width: 300px;">
+        </div>
+   
+        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
+            <p style="flex: 1; margin-left: 20px;">
+                <h2>躍進
+                </h2>
+                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;">
+                    SUNO
+                </p>
+            <audio id="myAudio" controls>
+                <br>s
+                <source src="images/躍進.mp3" type="audio/mpeg">
+                您的瀏覽器不支援音訊元素。
+            </audio>
+            
+            <br>
+            
+            <input type="range" id="seekBar" value="0" min="0" max="100" step="1" style="width: 300px;">
+            
+            <script>
+                const audio = document.getElementById('myAudio');
+                const seekBar = document.getElementById('seekBar');
+            
+                // 當音訊播放進度改變時，更新進度條
+                audio.addEventListener('timeupdate', () => {
+                    const value = (audio.currentTime / audio.duration) * 100;
+                    seekBar.value = value;
+                });
+            
+                // 當用戶拖動進度條時，調整音訊播放位置
+                seekBar.addEventListener('input', () => {
+                    const seekTo = (seekBar.value / 100) * audio.duration;
+                    audio.currentTime = seekTo;
+                });
+            </script>
+            
+            
+
+            <img  src="images/躍進.jpeg" alt="單個旋律" style="width: 300px;">
+        </div>
+   
+        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
+            <p style="flex: 1; margin-left: 50px;">
+                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 20px;">
+                    〈單個旋律〉歌詞
+                </p>
+            </p>
+            <img  src="images/單個旋律1.jpg" alt="單個旋律" style="width: 200px;">
+            <img  src="images/單個旋律2.jpg" alt="單個旋律" style="width: 200px;">
+            <p style="flex: 1; margin-left: 50px;">
+                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 20px;">
+                    〈躍進〉歌詞
+                </p>
+                
+            </p>
+            <img  src="images/躍進1.png" alt="單個旋律" style="width: 200px;">
+            <img  src="images/躍進2.png" alt="單個旋律" style="width: 200px;">
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div style="display: flex; align-items: center; justify-content: space-between;"class="box44">
+            <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 30px;"style="text-align;">
+                聯絡方式
+            </p>
+            <p style="flex: 1; margin-left: 50px; "class="text-left">
+                Instagram :@yang_chien._.9
+                <br>
+                IG連結:https://www.instagram.com/yang_chien._.9/profilecard/?igsh=MXFtcTA4dzFwdDd3dg==
+                <br><br>
+                Facebook:閔茜
+                <br>
+                FB連結:https://www.facebook.com/profile.php?id=100013455575253
+            </p>
+            <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;"style="text-align;">
+                可以的話請不要聯絡
+            </p>
+            <h2 style="padding-right: 70px;">
+                2003
+                <br>
+                1009
+            </h2>
+        </div>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+body {
+	background-color:#DDDDDD;
+}
+
+.news{
+	background-color:#FFFFFF;
+}
+
+.padding_all_1{
+	padding:50px;
+}
+
+.padding_all_2{
+padding:10px 50px; /*  順序 上下 左右  */
+}
+
+.padding_left{
+	padding-left:50px;
+}
+
+.padding_right{
+	padding-right:50px;
+}
+
+.padding_top{
+	padding-top:50px;
+}
+
+.padding_bottom{
+	padding-bottom:50px;
+}
+
+span.crimson{
+	color:#DC143C; 
+}

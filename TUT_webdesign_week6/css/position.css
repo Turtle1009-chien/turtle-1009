@@ -1,0 +1,87 @@
+body {
+
+}
+
+.red{
+	background-color: rgba(255,0,0,0.8);
+}
+
+.blue{
+	background-color: rgba(0,0,255,0.8);
+}
+
+.green{
+	background-color: rgba(0,255,0,0.8);
+}
+
+.yellow{
+	background-color: rgba(255,255,0,0.8);
+}
+
+.black{
+	background-color: rgba(0,0,0,0.8);
+	color:#FFFFFF;
+}
+
+.fix_top{
+	position: fixed; /*position位置為固定fixed時*/
+	top:0px;
+}
+
+.fix_left{
+	position:fixed; /*position位置為固定fixed時*/
+	top: 50%;
+	left:0px;	
+}
+
+.fix_right{
+	position:fixed; /*position位置為固定fixed時*/
+	top:50%;
+	right: 0px;	
+}
+
+.fix_bottom{
+	position: fixed; /*即便頁面捲動，它還是會固定在相同的位置。*/
+	bottom:0px;
+}
+
+.fix_center{
+	position: fixed; /*即便頁面捲動，它還是會固定在相同的位置。*/
+	top:50%;
+	left: 50%;
+	margin-left:-128px;
+	margin-top:-10px;
+}
+
+div{
+	padding:10px;
+	border:solid 2px #000;
+	border-radius:10px;
+}
+
+.box{
+	height:200px;
+}
+
+.content{
+	width:300px;
+}
+
+.absolute_1{
+	position: absolute; /*元素的定位是在他所處上層容器的相對位置。*/
+	z-index: 1;
+	top:200px;
+	left: 200px;
+}
+
+.absolute_2{
+	position: absolute; /*元素的定位是在他所處上層容器的相對位置。*/
+	z-index: 2;
+	top:50px;
+	left: 200px;
+}
+
+.relative{
+	margin:10px;
+	position: relative; /*一個設定為 position: relative 的元素內設定 top 、 right 、 bottom 和 left 屬性，會使其元素「相對地」調整其原本該出現的所在位置，而不管這些「相對定位」過的元素如何在頁面上移動位置或增加了多少空間，都不會影響到原本其他元素所在的位置。*/
+}

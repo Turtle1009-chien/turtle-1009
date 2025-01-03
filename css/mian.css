@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(239, 229, 208);
+}
+.news{
+    background-color: rgb(255, 153, 0);
+}
+.padding_all{
+    padding: 50px;
+}
+.paddimg_all_2{
+    padding: 20px 50px;
+}
+.paddimg_left{
+    padding-left: 50px;
+}
+.paddimg_right{
+    padding-right: 50px;
+}
+.paddimg_top{
+    padding-top: 50px;
+}
+.paddimg_bottom{
+    padding-bottom: 50px;
+}
+.margin_all{
+
+}
+.margin_all_2{
+    margin:50px;
+}
+.margin_left{
+    margin-left:50px;
+}
+.margin_righer{
+    margin-right:50px;
+}
+.margin_bottom{
+    margin-bottom: 50px;
+}
+.margin_all_3{
+    margin: 20px 30px 40px 50px;
+}
+.box{
+    background-color: rgb(255, 255, 255);
+    width: 980px;
+    margin: 15px auto;
+    padding: 20px;
+    border-radius: 20px;
+}

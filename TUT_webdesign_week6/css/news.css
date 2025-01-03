@@ -1,0 +1,25 @@
+body {
+	background-color:#DDDDDD; /*設定背景豔色*/
+}
+
+.box{
+	width:980px; /*設定選擇器指定標籤的寬度*/
+	margin:15px auto; /*上下設定15px 左右置中*/
+	background-color:#FFFFFF;
+	padding:10px;
+	border-radius:10px; /*設定border的圓角*/
+}
+
+span.data{
+	color:#aaa; 
+}
+
+div.content{
+	padding:30px;
+	border:solid 1px #808080; /*可以用一行border設定邊框的樣式、寬度、顏色*/
+	margin-top:10px;
+}
+
+div.photo{
+	text-align: center;
+}

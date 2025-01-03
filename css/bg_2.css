@@ -1,0 +1,28 @@
+body {
+	background-color:gray; /*設定背景顏色*/
+}
+div{
+	width: 500px; /*設定所有的div大小為 500*300px */
+	height: 300px;
+}
+div.div_bg1{
+	background:#FFFFFF url(../images/dark2.png) no-repeat;
+	background-position:center;
+	background-size:110% auto ;
+	color:#FFFFFF;
+	
+}
+div.div_bg2{
+	background:#FFFFFF url(../images/the_division_dark_zone.jpg) no-repeat;
+	background-position:center;
+	background-size:110% auto ; /*設定背景大小 上下110% 左右自動對齊*/
+	color:#FFFFFF;
+}
+a.iron_man{
+	display:block; /* 區塊跟裡面的元素都會以區塊的方式呈現*/
+	width:40%; /*寬度可以設定為百分比*/
+	height:300px;
+	background: #FFFFFF url(../images/iron_man.jpg) no-repeat; /*可以用background屬性 設定背景顏色、圖片連結、是否重複*/
+	background-position:center;
+	background-size: cover;
+}

@@ -1,0 +1,112 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/未命名的作品\ \(2\).jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: inherit; 
+    font-size: "微軟正黑體"
+    padding 10px;
+}
+
+header {
+    background-color: #042a33;
+    color: #ffffff;
+    padding: 40px 50px;
+    text-align: justify;
+}
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+#top ul li a:hover{
+    color: rgb(73, 183, 243);
+}
+main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main img {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    border: 0px solid #090505;
+    border-radius: 5px;
+}
+main img ol{
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border: 0px solid #090505;
+    border-radius: 5px;
+}
+h2{
+    color: #ffffff;
+    font: size 5px;
+}
+h3{
+    color: #62afdb;
+    font-size: 14px;
+}
+p{
+    color: #ffffff;
+
+}
+.class{
+    color: #7b99fd;
+}
+.box{
+    background-color: #44ffda29;
+    width: 1200px;
+    margin: 15px auto;
+    border-radius:20px;
+}
+.box1{
+    background-color: #44b7ff3d;
+    width: 1200px;
+    margin: 15px auto;
+    border-radius:20px;
+}
+.box2{
+    background-color: #ff1a722d;
+    width: 1200px;
+    margin: 15px auto;
+    border-radius:20px;
+}
+.box3{
+    background-color: #925afc2d;
+    width: 1200px;
+    margin: 15px auto;
+    border-radius:20px;
+}
+.box44{
+background-color: #063349;
+        color: #ffffff;
+        padding: 50px 20px;
+        text-align: justify;
+}
+.box5{
+    background-color: hsla(22, 94%, 63%, 0.195);
+    width: 1500px;
+    margin: 50px auto;
+    border-radius:100px;
+}

@@ -1,0 +1,8 @@
+body {
+	background-image:url(../images/dark.jpeg); /*引用背景圖*/
+	background-repeat:no-repeat; /*背景圖不重複*/
+	background-position:center; /*背景位置*/
+	color:#fff; /*背景顏色*/
+	background-size:cover; /*背景覆蓋整個網頁*/
+	background-attachment:fixed; /*背景圖片固定不動，滑鼠上下滾動僅會移動網頁主體。*/
+}
