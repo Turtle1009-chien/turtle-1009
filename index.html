@@ -6,21 +6,29 @@
     <title>茜的作品集</title>
     <link rel="shortcut icon" href="images/原始龜.jpg">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <title>右向左滑動 Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .center-content {
-            text-align: right; /* 將文字和圖片水平置中 */
+        .carousel-inner {
+            display: flex;
+            overflow: hidden;
+            direction: ltr; /* 左到右（Bootstrap 預設方向） */
         }
-
-        img {
-            width: 200px;  /* 設定圖片的寬度 */
-            height: auto;  /* 保持圖片比例 */
+        .carousel-item {
+            flex: 0 0 100%;
+            transition: transform 1s ease-in-out; /* 1秒滑動效果 */
         }
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+</body>
+<body>
     <header>
         <nav id="top">
-            <h1 color >茜的作品集</h1>
+            <h1>茜的作品集</h1>
+            <!-- 漢堡菜單按鈕 -->
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul>
                 <li><a href="index.html">主頁</a></li>
                 <li><a href="sketch.html">手繪</a></li>
@@ -29,54 +37,94 @@
             </ul>
         </nav>
     </header>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/2.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/3.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/4.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/5.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/6.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="images/7.jpg" alt="Third slide">
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const totalItems = carouselItems.length;
+
+    function switchSlide() {
+        carouselItems[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalItems; // 無限迴圈
+        carouselItems[currentIndex].classList.add('active');
+    }
+
+    // 每隔 2 秒切換幻燈片
+    setInterval(() => {
+        switchSlide();
+    }, 3000); // 1 秒停止 + 2 秒動畫
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <main>
         <h2>呦歡迎</h2>
-        <br>
-        <h3>種類包括2D手繪安得電繪</h3>
-        <br>
-        <img src="images/素描_男.jpg" alt="手繪作品3"style="width: 350px;">
-        <img src="images/素描_狼.jpg" alt="手繪作品5"style="width: 350px;">
-        <img src="images/素描_龍.jpg" alt="手繪作品5"style="width: 350px;">
-        <br>
-        <img src="images/素描_鳥.jpg" alt="手繪作品5"style="width: 500px;">
-        <img src="images/素描_樹枝.jpg" alt="手繪作品4"style="width: 500px;">
-        <br>
-        <img src="images/IMG_0721.jpeg" alt="手繪作品5"style="width: 350px;">
-        <img  src="images/1676561518082.png" alt="雙胞胎姊" style="width: 350px;">
-        <img  src="images/1676561703175.png" alt="雙胞胎妹" style="width: 350px;">
-        <br>
-        <img  src="images/IMG_1749.JPG" alt="雙胞胎妹" style="width: 900px;">
-        <br>
-        <img  src="images/20220703.jpg" alt="雙胞胎姊" style="width: 450px;">
-        <img  src="images/20220703(2).jpg" alt="雙胞胎姊" style="width: 450px;">
-
-
-
-
-
-
-        <div style="display: flex; align-items: center; justify-content: space-between;"class="box44">
-            <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 30px;"style="text-align;">
-                聯絡方式
+        <h3>種類包括2D手繪和電繪</h3>
+        <!-- 圖片區域 -->
+         <body>
+            <img data-aos="fade-right" src="images/素描_男.jpg" alt="手繪作品3">
+            <img data-aos="zoom-in" src="images/素描_狼.jpg" alt="手繪作品5">
+            <img data-aos="fade-left" src="images/素描_龍.jpg" alt="手繪作品5">
+            <br>
+            <img data-aos="fade-right"src="images/素描_鳥.jpg" alt="手繪作品5">
+            <img data-aos="fade-left" src="images/素描_樹枝.jpg" alt="手繪作品4">
+            <br>
+            <img data-aos="fade-right" src="images/IMG_0721.jpeg" alt="手繪作品5">
+            <img data-aos="zoom-in" src="images/1676561518082.png" alt="雙胞胎姊">
+            <img data-aos="fade-left" src="images/1676561703175.png" alt="雙胞胎妹">
+            <br>
+            <img data-aos="zoom-in" src="images/IMG_1749.JPG" alt="作品">
+            <br>
+            <img data-aos="fade-right" src="images/20220703.jpg" alt="作品">
+            <img data-aos="fade-left" src="images/20220703(2).jpg" alt="作品">
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
+         </body>
+       
+        <!-- 聯絡方式 -->
+        <div class="box44">
+            <h1>聯絡方式</h1>
+            <p>
+                ●IG — <a href="https://www.instagram.com/yang_chien._.9/profilecard/?igsh=MXFtcTA4dzFwdDd3dg==" target="_blank">Instagram: @yang_chien._.9</a><br>
+                ●Facebook —  <a href="https://www.facebook.com/profile.php?id=100013455575253" target="_blank">Facebook Chien</a>
             </p>
-            <p style="flex: 1; margin-left: 50px; "class="text-left">
-                Instagram :@yang_chien._.9
-                <br>
-                IG連結:https://www.instagram.com/yang_chien._.9/profilecard/?igsh=MXFtcTA4dzFwdDd3dg==
-                <br><br>
-                Facebook:閔茜
-                <br>
-                FB連結:https://www.facebook.com/profile.php?id=100013455575253
-            </p>
-            <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;"style="text-align;">
-                可以的話請不要聯絡
-            </p>
-            <h2 style="padding-right: 70px;">
-                2003
-                <br>
+             <!-- <p>可以的話請不要聯絡</p> -->
+            <h1 >
+                2003<br>
                 1009
-            </h2>
+            </h1>
         </div>
     </main>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
