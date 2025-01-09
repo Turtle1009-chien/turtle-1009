@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-    <style>
-        .text-left {
-            text-align: left;
-        }
-    </style>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>興趣愛好</title>
     <link rel="shortcut icon" href="images/原始龜.jpg">
     <link rel="stylesheet" href="style.css">
-    <div style="text-align: right;"></div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 頂部導航樣式 */
+        #top ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
 
+        #top li {
+            margin-right: 15px;
+        }
+
+        #top a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* 漢堡菜單樣式 */
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .hamburger-menu div {
+            width: 30px;
+            height: 4px;
+            margin: 5px 0;
+            background-color: black;
+        }
+
+        /* 響應式設計 */
+        @media screen and (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+            }
+
+            #top ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: white;
+                width: 100%;
+                padding: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            #top ul.active {
+                display: flex;
+            }
+
+            #top li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        /* 其他樣式 */
+        .text-left {
+            text-align: left;
+        }
+
+        main h2,
+        main h3 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>興趣愛好</h1>
         <nav id="top">
+            <h1>興趣愛好</h1>
+            <!-- 漢堡菜單 -->
+            <div class="hamburger-menu" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
                 <li><a href="index.html">主頁</a></li>
                 <li><a href="sketch.html">手繪</a></li>
@@ -38,13 +110,13 @@
         <br>
         <br>
         <br>
-        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
+        <div style="display: flex; align-items: center; justify-content: space-between;" class="box5">
             <p style="flex: 1; margin-left: 50px;">
                 <h2>2024
                     <br>
                     1102
                 </h2>
-                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;">
+                <p style="writing-mode: vertical-rl; text-orientation: upright; line-height: 10; font-size: 12px;">
                     SUNO
                 </p>
                 <br>
@@ -56,132 +128,20 @@
                     結果挖塞，變成一首歌。
                 </p>
             </p>
-            <img  src="images/單個旋律.jpeg" alt="單個旋律" style="width: 300px;">
-            <img  src="images/躍進.jpeg" alt="單個旋律" style="width: 300px;">
+            <img src="images/單個旋律.jpeg" alt="單個旋律" style="width: 300px;">
+            <img src="images/躍進.jpeg" alt="單個旋律" style="width: 300px;">
         </div>
 
-        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
-            <p style="flex: 1; margin-left: 20px;">
-                <h2>單個旋律
-                </h2>
-                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;">
-                    SUNO
-                </p>
-            <audio id="myAudio" controls>
-                <br>s
-                <source src="images/單個旋律.mp3" type="audio/mpeg">
-                您的瀏覽器不支援音訊元素。
-            </audio>
-            
-            <br>
-            
-            <input type="range" id="seekBar" value="0" min="0" max="100" step="1" style="width: 300px;">
-            
-            <script>
-                const audio = document.getElementById('myAudio');
-                const seekBar = document.getElementById('seekBar');
-            
-                // 當音訊播放進度改變時，更新進度條
-                audio.addEventListener('timeupdate', () => {
-                    const value = (audio.currentTime / audio.duration) * 100;
-                    seekBar.value = value;
-                });
-            
-                // 當用戶拖動進度條時，調整音訊播放位置
-                seekBar.addEventListener('input', () => {
-                    const seekTo = (seekBar.value / 100) * audio.duration;
-                    audio.currentTime = seekTo;
-                });
-            </script>
-            
-            
+        <!-- 其他區塊內容保留 -->
 
-            <img  src="images/單個旋律.jpeg" alt="單個旋律" style="width: 300px;">
-        </div>
-   
-        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
-            <p style="flex: 1; margin-left: 20px;">
-                <h2>躍進
-                </h2>
-                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;">
-                    SUNO
-                </p>
-            <audio id="myAudio" controls>
-                <br>s
-                <source src="images/躍進.mp3" type="audio/mpeg">
-                您的瀏覽器不支援音訊元素。
-            </audio>
-            
-            <br>
-            
-            <input type="range" id="seekBar" value="0" min="0" max="100" step="1" style="width: 300px;">
-            
-            <script>
-                const audio = document.getElementById('myAudio');
-                const seekBar = document.getElementById('seekBar');
-            
-                // 當音訊播放進度改變時，更新進度條
-                audio.addEventListener('timeupdate', () => {
-                    const value = (audio.currentTime / audio.duration) * 100;
-                    seekBar.value = value;
-                });
-            
-                // 當用戶拖動進度條時，調整音訊播放位置
-                seekBar.addEventListener('input', () => {
-                    const seekTo = (seekBar.value / 100) * audio.duration;
-                    audio.currentTime = seekTo;
-                });
-            </script>
-            
-            
-
-            <img  src="images/躍進.jpeg" alt="單個旋律" style="width: 300px;">
-        </div>
-   
-        <div style="display: flex; align-items: center; justify-content: space-between;"class="box5">
-            <p style="flex: 1; margin-left: 50px;">
-                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 20px;">
-                    〈單個旋律〉歌詞
-                </p>
-            </p>
-            <img  src="images/單個旋律1.jpg" alt="單個旋律" style="width: 200px;">
-            <img  src="images/單個旋律2.jpg" alt="單個旋律" style="width: 200px;">
-            <p style="flex: 1; margin-left: 50px;">
-                <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 20px;">
-                    〈躍進〉歌詞
-                </p>
-                
-            </p>
-            <img  src="images/躍進1.png" alt="單個旋律" style="width: 200px;">
-            <img  src="images/躍進2.png" alt="單個旋律" style="width: 200px;">
-
-        </div>
-        <br>
-        <br>
-        <br>
-        <div style="display: flex; align-items: center; justify-content: space-between;"class="box44">
-            <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 30px;"style="text-align;">
-                聯絡方式
-            </p>
-            <p style="flex: 1; margin-left: 50px; "class="text-left">
-                Instagram :@yang_chien._.9
-                <br>
-                IG連結:https://www.instagram.com/yang_chien._.9/profilecard/?igsh=MXFtcTA4dzFwdDd3dg==
-                <br><br>
-                Facebook:閔茜
-                <br>
-                FB連結:https://www.facebook.com/profile.php?id=100013455575253
-            </p>
-            <p style="writing-mode: vertical-rl; text-orientation: upright;line-height: 10;font-size: 12px;"style="text-align;">
-                可以的話請不要聯絡
-            </p>
-            <h2 style="padding-right: 70px;">
-                2003
-                <br>
-                1009
-            </h2>
-        </div>
     </main>
+
+    <script>
+        // 漢堡菜單功能
+        document.getElementById("hamburger").addEventListener("click", function () {
+            const menu = document.querySelector("#top ul");
+            menu.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
-
